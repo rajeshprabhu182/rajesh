@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/rajeshprabhu182/rajesh.git'
+            }
+        }
+            stage('Linux commands') {
+            steps {
+                sh '''
+                
+                ls -la
+                
+                '''
+            }
+        }
+    }
+}
